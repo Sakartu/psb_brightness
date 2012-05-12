@@ -21,7 +21,13 @@ int main(int argc, const char* argv[])
 		fprintf(stderr, "Brightness should be between 0 and 100!\n");
 		exit(EXIT_FAILURE);
 	}
-	fprintf(fp, "%ld", val);
-	printf("Brightness set to %ld%%\n", val);
+	if(fprintf(fp, "%ld", val) < 0)
+	{
+		printf("Could not set brightness, do you have the right permissions?");
+	}
+	else 
+	{
+		printf("Brightness set to %ld%%\n", val);
+	}
 	fclose(fp);
 }
