@@ -1,5 +1,4 @@
 Brightness program for psb_gfx
-==============================
 
 This little program should be called with a single argument representing the
 brightness that you want to have your monitor set to, as a percentage. Once
