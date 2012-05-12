@@ -1,4 +1,8 @@
 Brightness program for psb_gfx
+==============================
+
+Description
+-----------
 
 This little program should be called with a single argument representing the
 brightness that you want to have your monitor set to, as a percentage. Once
@@ -6,6 +10,9 @@ called (and when it has sufficient rights, usually root) it will try to write
 the provided percentage value to the file
 "/sys/class/backlight/psb-bl/brightness", which should change the brightness of
 your monitor. 
+
+Usage
+-----
 
 For efficient use you should put the compiled brightness binary in your path
 (for instance in /usr/bin/), change ownership to root and make it suid. This can
