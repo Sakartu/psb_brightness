@@ -4,12 +4,16 @@ Brightness program for psb_gfx
 Description
 -----------
 
-This little program should be called with a single argument representing the
-brightness that you want to have your monitor set to, as a percentage. Once
-called (and when it has sufficient rights, usually root) it will try to write
-the provided percentage value to the file
-"/sys/class/backlight/psb-bl/brightness", which should change the brightness of
-your monitor. 
+This program can be used by owners of a laptop with the Intel GMA 500 chipset
+to change their brightness. It only works when the psb_gfx driver (embedded in
+current kernels) is used. For Ubuntu (and derivative) users this means for
+version 12.04 and later.
+
+The program should be called with a single argument representing the brightness
+that you want to have your monitor set to, as a percentage. Once called (and
+when it has sufficient rights, usually root) it will try to write the provided 
+percentage value to the file "/sys/class/backlight/psb-bl/brightness", which 
+should change the brightness of your monitor. 
 
 Usage
 -----
