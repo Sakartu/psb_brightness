@@ -14,6 +14,12 @@ int main(int argc, const char* argv[])
 
 	FILE* fp = fopen("/sys/class/backlight/psb-bl/brightness", "w+");
 
+	if(fp == NULL)
+	{
+		printf("Could not set brightness, do you have the right permissions?\n");
+		exit(EXIT_FAILURE);
+	}
+
 	long int val = strtol(argv[1], NULL, 10);
 
 	if(val < 0 || val > 100)
